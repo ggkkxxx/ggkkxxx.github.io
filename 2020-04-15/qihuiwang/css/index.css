@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main-m{
+    width: 100%;
+    
+    border-bottom: 1px solid rgb(187, 187, 187);
+    height: 30px;
+}
+a{
+    text-decoration: none;
+    color: gray;
+}
+a:hover{
+    color: red;
+}
+li{
+    color: gray;
+}
+#menu {         
+    font-size: 12px;
+    width:1200px;
+    margin: 0 auto;
+    position: relative;
+    background-color: tomato;
+    
+}   
+#menu li {      
+    list-style:none; 
+    float: left;     
+
+    padding: 5px  8px;
+}
+#m2{
+    position: absolute;
+    right: 0;
+}
+
