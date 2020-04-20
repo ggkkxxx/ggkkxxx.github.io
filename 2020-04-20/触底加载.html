@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        li{
+            list-style:none
+        }
+        #singerList{
+            width: 1000px;
+            overflow: hidden;
+            margin: 0 auto;
+           
+        }
+        #singerList li{
+            float:left;
+            width:100px;
+            box-sizing: border-box;
+            padding:10px;
+        }
+        #singerList img{
+            width: 80px;
+            height: 80px;
+        }
+        h4{
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <button id="send">获取数据</button>
+    <ul id="singerList">
+        
+    </ul>
+</body>
+
+<script>
+   
+    
+    send.onclick=function(){
+        // 1.创建请求对象
+        function relog(pg){
+        var xhr=new XMLHttpRequest();
+       
+        // 2.指定请求路径、请求方式
+                        // 请求路径  ?之后是携带的参数  x=10&y=
+        xhr.open("GET", "http://vebcoder.cn:9090//artist/artistInfo?category=0&pn="+pg+"&rn=100")
+        
+        // 3.发送请求
+        xhr.send();
+        // 4.监听请求成功的回调函数
+        xhr.onreadystatechange=function(){
+            if(xhr.status==200&&xhr.readyState==4){
+                // 拿到请求结果
+                
+                var res=JSON.parse(xhr.responseText);
+                var list=res.data.artistList;
+
+                // 展示到页面
+                var html="";
+                for(var i=0;i<list.length;i++){
+                    html+='<li><img src="'+list[i].pic+'" alt=""><h4>'+list[i].name+'</h4></li>'
+                        singerList.innerHTML=html;
+                    }
+                
+                }
+            }
+        }
+        var pg = 0;
+        scroll(pg);
+        function scroll() {
+            var docH = document.documentElement.clientHeight || document.body.clientHeight;
+            var scrolT = start=document.body.scrollTop||document.documentElement.scrollTop;
+            var scrolH = document.documentElement.scrollHeight || document.body.scrollHeight;
+
+            console.log(docH)
+            console.log(scrolT)
+            console.log(scrolH)
+            if ( scrolH - docH - scrolT <100) {
+                pg ++;
+                relog(pg)
+              
+            }
+           
+
+        }
+         window.onscroll = scroll
+    }
+   
+</script>
+</html>
