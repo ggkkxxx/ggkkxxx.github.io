@@ -79,16 +79,17 @@
         var pg = 0;
         scroll(pg);
         function scroll() {
-            var docH = document.documentElement.clientHeight || document.body.clientHeight;
-            var scrolT = start=document.body.scrollTop||document.documentElement.scrollTop;
-            var scrolH = document.documentElement.scrollHeight || document.body.scrollHeight;
+            var winH = document.documentElement.clientHeight || document.body.clientHeight;
+            var scrollT = start=document.body.scrollTop||document.documentElement.scrollTop;
+            var docH = document.documentElement.offsetHeight || document.body.offsetHeight;
 
+            console.log(winH)
+            console.log(scrollT)
             console.log(docH)
-            console.log(scrolT)
-            console.log(scrolH)
-            if ( scrolH - docH - scrolT <100) {
+            if ( winH + scrollT+150 >= docH) {
                 pg ++;
                 relog(pg)
+                
               
             }
            
