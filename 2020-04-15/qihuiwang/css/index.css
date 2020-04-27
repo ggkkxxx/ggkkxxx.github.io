@@ -1,40 +1,355 @@
-*{
+body {
     margin: 0;
     padding: 0;
 }
 
-#main-m{
-    width: 100%;
-    
-    border-bottom: 1px solid rgb(187, 187, 187);
-    height: 30px;
-}
-a{
+a {
     text-decoration: none;
-    color: gray;
+    padding: 0;
+    color: #767676;
 }
-a:hover{
+
+header {
+    background-color: lightgrey;
+    font-size: small;
+}
+
+#nav-bar {
+    width: 90%;
+    height: 30px;
+    margin: 0 auto;
+    position: relative;
+
+
+}
+
+#nav-list {
+    display: inline-block;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+#nav-list a {
+    padding: 0 5px;
+}
+
+#list-right {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 0px;
+
+}
+
+.item {
+    height: 30px;
+
+    transition: all 0.3s;
+
+}
+
+.item-name {
+    height: 30px;
+    width: 100px;
+    line-height: 30px;
+    text-align: center;
+    font-size: small;
+
+}
+
+.drop {
+    padding: 0;
+    margin: 0;
+    /* position: relative; */
+    display: none;
+    float: left;
+    text-align: center;
+}
+
+.drop li {
+    width: 100px;
+}
+
+.item a:hover {
     color: red;
 }
 li{
-    color: gray;
+    list-style: none;
 }
-#menu {         
-    font-size: 12px;
-    width:1200px;
+.list-item {
+    list-style: none;
+    padding: 0;
+}
+
+.list-item li {
+    list-style: none;
+    line-height: 30px;
+}
+
+#logo-title {
+    width: 90%;
+    height: 150px;
     margin: 0 auto;
-    position: relative;
-    background-color: tomato;
     
-}   
-#menu li {      
-    list-style:none; 
-    float: left;     
-
-    padding: 5px  8px;
 }
-#m2{
+
+#title-main {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+#logo{
+    display: inline;
+    float: left;
+}
+#logo a {
+    background: url(../images/logo.png) no-repeat center center;
+    width: 208px;
+    height: 80px;
+    padding: 35px 0;
+    display: block;
+}
+
+#logo-font {
+    width:200px;
+    height:50px;
+    line-height:50px;
+    float: left;
+    margin-top:30px;
+    padding:15px 30px 15px 20px;
+    font-size:21px;
+   
+    background: url(../images/logoFont.jpg) no-repeat 25px center;
+}
+#search-box{
+    float: left;
+    width: 60%;
+    height: 45px;
+    left: 100px;
+    margin-top: 50px;
+    
+    
+}
+#search-box input{
+   width: 60%;
+   height: 100%;
+   border: none;
+   border: 2px solid rgba(221, 6, 6, 0.801);
+}
+#search-box a{
+    
+    width: 20%;
+    height: 100%;
+    padding: 10px 10px;
+    font-size: 15px;
+    border: 1px solid lightgray;
+}
+#logo-end{
+  top: 0px;
+
+  display: inline-block;
+  width: 100px;
+  right: 0;
+  
+  position: absolute;
+  list-style: none;
+}
+#logo-end ul{
+    font-size: 12px;
+    margin-left: 5px;
+    padding: 0;
+}
+#logo-end img{
+    width: 70px;
+    height: 70px;
+    border: 1px solid lightgray;
+    padding: 5px;
+}
+#mainNav{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0px;
+    border: 1px solid black;
+    
+}
+#mainNav ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+}
+#mainNav li{
+    padding:0 25px;
+    font-size: 14px;
+    color: black;
+
+}
+#mainNav a:hover{
+    color: red;
+}
+#main-bg{
+    width: 100%;
+    height: 500px;
+    background: url(../images/acg_banner.jpg) no-repeat center;
+}
+#onBg{
+    width: 90%;
+    height: 480px;
+   
+    margin: 0 auto;
+    background-color: rgb(240, 234, 234);
+}
+#bg-left{
+    width: 210px;
+    height: 460px;
+    background-color: white;
+    padding: 10px 0;
+}
+#bg-left ul{
+    margin: 0px 10px;
+    padding: 0;
+}
+#bg-left li{
+    padding:10px 0;
+    margin-top: 5px;
+}
+#bg-left a{
+    font-size: 14px;
+    color: black;
+    
+}
+#lbt{
+    width: 740px;
+    height: 305px;
+   
+    overflow: hidden;
+    position: relative;
+   
+    top: -480px;
+    left: 220px;
+
+    
+}
+/* inner 下面每一个div */
+.lbt-item{
     position: absolute;
-    right: 0;
+    top: 0px;
+
+}
+#inner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    /* 过渡效果 */
+    transition: all 1s;
+}
+.change{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: rgba(81, 130, 143, 0.356);
+    text-align: center;
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 24px;
+    position: absolute;
+    /* calc 计算函数 50%高度的一半 */
+    top: calc(50% - 25px);
+    text-shadow: 0 0 5px black;
+    box-shadow: 0 0 20px black;
+    -moz-user-select: none;
+    cursor: pointer;
+    display: none;
 }
 
+#points{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+#points li{
+    height: 10px;
+    width: 10px;
+    
+    background-color: rgba(0, 0, 0, 0.322);
+    border:1px solid white;
+    margin: 0 5px;
+    cursor: pointer;
+     
+}
+#points li:hover{
+    border: 1px solid red;
+}
+#points li.high-lighted{
+    background-color: rgba(211, 190, 226, 0.644);
+}
+.bg-bottom{
+    width: 740px;
+    height: 150px;
+    display: flex;
+    background: white;
+    position: absolute;
+    top: 535px;
+    left: 290px;
+    padding: 0;
+   
+}
+.bg-bottom a{
+    display: block;
+    width: 183px;
+    height: 165px;
+    border: 1px solid #f5f5f5;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    cursor: pointer;
+}
+.picfont{
+    position: absolute;
+    top: 70px;
+    width: 184px;
+    text-align: center;
+    line-height: 18px;
+    left: 0px;
+}
+.picfont h4{
+    font-size: 14px;
+    color: #4d4d4d;
+    font-weight: normal;
+    height: 22px;
+    line-height: 22px;
+    width: 184px;
+}
+.picfont span{
+    font-size: 12px;
+    height: 22px;
+    color: #ff7e20;
+    line-height: 24px;
+    display: inline-block;
+    width: 184px;
+    overflow: hidden;
+}
+.bg-bottom img{
+    width: 184px;
+    height: 165px;
+    margin-left: 0px;
+    border-right: 1px solid #f5f5f5;
+    text-align: center;
+
+    
+}

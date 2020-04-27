@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="jquery.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <style>
         a{
             display: none;
@@ -22,6 +22,7 @@
         $.get("http://vebcoder.cn:9090/url?format=mp3&rid=81010978&response=url&type=convert_url3&br=128kmp3&from=web",
         function(data,status){
             var music = JSON.parse(data);
+            console.log(music.url)
             $('a').css('display','block')
             $('a').attr('href',music.url)
             
