@@ -10,10 +10,15 @@
             margin: 0;
             padding: 0;
         }
+        body{
+            margin-top: 0.05rem;
+            margin-bottom: 0.06rem;
+        }
         html{
             font-size: 200vw;
             background-color: lightgray;
             overflow: scroll;
+            
         }
         li{
             list-style: none;
@@ -24,6 +29,10 @@
             background-color: white;
             line-height: 0.05rem;
             text-align: center;
+            width: 0.5rem;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
         #header input{
             border: none;
@@ -36,11 +45,12 @@
             height: 0.03rem;
             padding: 0 0.01rem;
         }
-        #header li{
-            padding: 0 0.01rem;
-        }
-        #text2{
+        #header ul{
             
+            margin: 0 auto;
+        }
+        #header li{
+            padding-left:0.018rem;
         }
         #lbt img{
             width: 0.5rem;
@@ -66,10 +76,14 @@
             width: 0.5rem;
         }
         #footer{
+            position: sticky ;
             width: 0.5rem;
             height: 0.06rem;
             background-color: white;
             margin-top: 0.01rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
             
         }
         #footer li{
@@ -77,6 +91,9 @@
             color: gray;
             padding: 0 0.03rem;
             text-align: center;
+        }
+        #footer li:hover{
+            color: red;
         }
         #footer a{
             display: block;
@@ -89,8 +106,8 @@
        <ul>
            <li class="layui-icon" style="color: red;">郑州&#xe625;</li>
            <li><input type="search" placeholder="搜索商家、套餐、话题"></li>
-           <li class="layui-icon" style="color: red;">&#xe63a;</li>
-           <li class="layui-icon" style="color: red;">&#xe657;</li>
+           <li class="layui-icon" style="color: red; font-size:0.025rem;">&#xe63a;</li>
+           <li class="layui-icon" style="color: red; font-size:0.025rem;">&#xe657;</li>
        </ul>
    </div>
    <div class="layui-carousel" id="test2" ">
