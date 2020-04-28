@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        html{
+            font-size: 13.33vw;
+            background-color: lightgray;
+            
+            
+        }
+        li{
+            list-style: none;
+            float: left;
+        }
+        #header{
+            height: 1rem;
+            background-color: white;
+            line-height: 1rem;
+            text-align: center;
+            width: 7.5rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        #header input{
+            border: none;
+            background-color: lightgray;
+            -moz-border-radius: 11px;
+            -khtml-border-radius: 11px;
+            -webkit-border-radius: 11px;
+            border-radius: 11px;
+            width: 4rem;
+            height: 0.5rem;
+            padding: 0 0.1rem;
+        }
+        #header ul{
+            
+            margin: 0 auto;
+        }
+        #header li{
+            padding-left:0.25rem;
+        }
+        #content{
+            width: 45rem;
+            height: 3.4rem;
+            padding: 0;
+            margin: 0;
+        }
+        #content img{
+            width: 7.5rem; 
+            height: 3.4rem;
+            padding: 0;
+            margin: 0;
+            display: block;
+            float: left;
+        }
+        #box{
+            width: 7.5rem;
+            height: 3.4rem;
+            position: relative;
+        }
+        #pics{
+            width: 3rem;
+            height: 0.3rem;
+            
+            position: absolute;
+            bottom: 0.1rem;
+            left: 2.5rem;
+            text-align: center;
+        }
+        #pics ul{
+            width: 1.5rem;
+            margin: 0 auto;
+        }
+        #points li{
+            margin-left: 0.2rem;
+            width: 0.1rem;
+            height: 0.1rem;
+            
+            border: 1px solid gray;
+            border-radius: 50%;
+            background-color: rgba(128, 128, 128, 0.281);
+        }
+        #items{
+
+            background-color: white;
+        }
+        #items ul{
+            height: 1rem;
+            width: 7rem;
+            margin: 0 auto;
+        }
+        #items li{
+            padding-left:0.65rem ;
+        }
+        #items img{
+            width: 1rem;
+        }
+        .same{
+            background-color: white;
+             margin-top: 0.1rem;
+        }
+        .same img{
+            width: 7.5rem;
+            
+        }
+        #footer{
+            position: sticky ;
+            width: 7.5rem;
+            height: 1rem;
+            background-color: white;
+            margin-top: 0.1rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            
+        }
+        #footer ul{
+            width: 7rem;
+            margin: 0 auto;
+            height: 1rem;
+        }
+        #footer li{
+            font-size: 0.5rem;
+            color: gray;
+            padding-left:0.56rem;
+            text-align: center;
+        }
+        #footer li:hover{
+            color: red;
+        }
+        #footer a{
+            display: block;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+   <div id="header">
+       <ul>
+           <li class="layui-icon" style="color: red; font-size:0.4rem;">郑州&#xe625;</li>
+           <li><input type="search" placeholder="搜索商家、套餐、话题"></li>
+           <li class="layui-icon" style="color: red; font-size:0.5rem;">&#xe63a;</li>
+           <li class="layui-icon" style="color: red; font-size:0.5rem;">&#xe657;</li>
+       </ul>
+   </div>
+   <div id="box">
+       <div id="content" style="margin-top:0px;">
+           <img src="./img/4.jpg" alt="">
+           <img src="./img/1.jpg" alt="">
+           <img src="./img/2.jpg" alt="">
+           <img src="./img/3.jpg" alt="">
+           <img src="./img/4.jpg" alt="">
+           <img src="./img/1.jpg" alt="">
+       </div>
+       <div id="pics">
+           <ul id="points">
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+       </div>
+   </div>
+  <div id="items">
+      <ul>
+          <li>
+              <img src="./img/1-1.png" alt="" style="width: 0.85rem;">
+          </li>
+          <li><img src="./img/1-2.png" alt="" style="width: 1.03rem;"></li>
+          <li><img src="./img/1-3.png" alt=""></li>
+          <li><img src="./img/1-4.png" alt=""></li>
+      </ul>
+  </div>
+  <div class="same"><img src="./img/2-1.png" ></div>
+  <div class="same"><img src="./img/3-1.png" alt=""></div>
+  <div class="same"><img src="./img/4-1.png" alt=""></div>
+  <div class="same"><img src="./img/5-1.png" alt=""></div>
+  <div class="same"><img src="./img/6-1.png" alt=""></div>
+  <div class="same"><img src="./img/7-1.png" alt=""></div>
+  <div id="footer">
+      <ul>
+          <li class="layui-icon">&#xe68e;<a href="">首页</a></li>
+          <li class="layui-icon">&#xe60f;<a href="">分类</a></li>
+          <li class="layui-icon">&#xe611;<a href="">新娘说</a></li>
+          <li class="layui-icon">&#xe631;<a href="">工具</a></li>
+          <li class="layui-icon">&#xe66f;<a href="">我的</a></li>
+      </ul>
+  </div>
+</body>
+<script src="layui/layui.js"></script>
+<script src="iscroll.Veb.js"></script>
+<script>
+    var points = document.getElementById('points').children
+     var isc=new iScroll("box",{
+        // 开启元素捕捉
+        snap:true,
+        // 关闭惯性
+        momentum:false,
+        // 隐藏水平滚动条
+        hScrollbar:false,
+        // 设置切换阀值
+        snapThreshold:60,
+        // 滚动结束回调
+        onScrollEnd:function(){
+            // 滚动结束获取当前页码
+            console.log(this.currPageX)
+            // 滚动到假的第一张 瞬间到达真的第一张
+            if(this.currPageX==5){
+                this.scrollToPage(1,0,0);
+            }
+            // 滚动到假的最后第一张 瞬间到达真的最后一张
+            if(this.currPageX==0){
+                this.scrollToPage(4,0,0);
+                console.log(this.currPageX)
+            }
+
+            // 根据currPageX对应小圆点
+            console.log(points.length)
+           for(i=0;i<points.length;i++){
+               console.log(i)
+                if(this.currPageX-1==i){
+                    points[i].style.backgroundColor='white'
+                }else{
+                    points[i].style.backgroundColor='rgba(128, 128, 128, 0.281)'
+                }
+           }
+
+        }
+    })
+
+    // 默认滚动到第二张  第二张才是真正的第一张
+    isc.scrollToPage(1,0,0);
+
+
+
+
+
+
+
+</script>
+</html>
